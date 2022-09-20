@@ -1,0 +1,131 @@
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* MI ESTILO */
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 25% auto;
+  grid-template-areas:
+    "nav nav"
+    "aside main"
+    "footer footer";
+}
+
+header {
+  grid-area: nav;
+}
+
+aside {
+  grid-area: aside;
+  margin: 0 2rem;
+}
+
+.perfil__foto {
+  margin: 0 auto;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.perfil__intro {
+  text-align: center;
+}
+
+.perfil__intro a {
+  display: block;
+}
+
+.perfil__stats li {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  grid-area: main;
+  margin: 0 4rem;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.nav-primaria,
+.nav-primaria__secciones,
+.nav-primaria__login,
+.nav-footer,
+.nav-footer > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-primaria,
+.nav-footer {
+  flex-grow: 1;
+  max-width: 95%;
+  margin: 1rem auto;
+}
+
+.nav-primaria form {
+  max-width: 35%;
+}
+
+.nav-primaria input {
+  width: 100%;
+}
+
+.nav-primaria a,
+.nav-primaria input {
+  display: block;
+  white-space: nowrap;
+}
+
+.nav-secundaria a {
+  display: inline-block;
+}
+
+main ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+ {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.nav-footer a {
+  display: block;
+}
