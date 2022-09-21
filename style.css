@@ -22,14 +22,66 @@ svg {
   display: block;
 }
 
-/* MI ESTILO */
+/* VARIABLES */
+:root {
+  --radius-size: 100px;
 
-ul {
-  list-style-type: none;
+  --clr-cta-default: black;
+  --clr-cta-default-bg: white;
+  --clr-cta-default-border: #e8e8e8;
+
+  --clr-cta-primario: white;
+  --clr-cta-primario-bg: #0057ff;
+
+  --clr-cta-secundario: #0057ff;
+  --clr-cta-secundario-bg: #f5f8ff;
+  --clr-cta-secundario-border: #dee8ff;
+
+  --clr-seleccionado: white;
+  --clr-seleccionado-bg: black;
+
+  --fs-x-small: 0.6875rem;
+  --fs-small: 0.875rem;
+  --fs-body: 0.9375rem;
+  --fs-large: 1.25rem;
+  --fs-x-large: 1.5rem;
 }
 
-a {
-  text-decoration: none;
+/* MI ESTILO */
+
+.logo-behance {
+  width: 82px;
+}
+
+.logo-adobe {
+  width: 60px;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  margin: 0.5rem 0;
+  color: var(--clr-cta-default);
+  background-color: var(--clr-cta-default-bg);
+  border: 1px solid var(--clr-cta-default-border);
+  border-radius: var(--radius-size);
+  font-size: var(--fs-small);
+  font-weight: bold;
+}
+
+.btn--primario {
+  color: white;
+  background-color: var(--clr-cta-primario-bg);
+}
+
+.btn--secundario {
+  color: var(--clr-cta-secundario);
+  background-color: var(--clr-cta-secundario-bg);
+  border-color: var(--clr-cta-secundario-border);
+}
+
+.btn--seleccionado {
+  color: var(--clr-seleccionado);
+  background-color: var(--clr-seleccionado-bg);
 }
 
 .grid-container {
@@ -42,6 +94,12 @@ a {
     "footer footer";
 }
 
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: var(--fs-body);
+  background-color: #f9f9f9;
+}
+
 header {
   grid-area: nav;
 }
@@ -49,11 +107,45 @@ header {
 aside {
   grid-area: aside;
   margin: 0 2rem;
+  line-height: 1.5;
+  background-color: white;
+  padding: 1.875rem;
+}
+
+aside h1 {
+  font-size: var(--fs-x-large);
+  font-weight: bold;
+}
+
+aside h2 {
+  text-transform: uppercase;
+  font-size: var(--fs-x-small);
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+}
+
+main {
+  grid-area: main;
+  margin: 0 4rem;
+}
+
+footer {
+  grid-area: footer;
+  font-size: var(--fs-x-small);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .perfil__foto {
   margin: 0 auto;
   border-radius: 50%;
+  width: 6.875rem;
   aspect-ratio: 1;
 }
 
@@ -68,15 +160,15 @@ aside {
 .perfil__stats li {
   display: flex;
   justify-content: space-between;
+  margin: 0.625rem 0;
 }
 
-main {
-  grid-area: main;
-  margin: 0 4rem;
+.perfil__stats li > :last-child {
+  font-size: var(--fs-large);
 }
 
-footer {
-  grid-area: footer;
+.perfil__about {
+  font-size: var(--fs-small);
 }
 
 .nav-primaria,
@@ -86,6 +178,7 @@ footer {
 .nav-footer > div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -93,11 +186,12 @@ footer {
 .nav-footer {
   flex-grow: 1;
   max-width: 95%;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
+  font-weight: bold;
 }
 
 .nav-primaria form {
-  max-width: 35%;
+  width: 30%;
 }
 
 .nav-primaria input {
@@ -118,12 +212,6 @@ main ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-}
-
- {
-  display: flex;
-  justify-content: space-between;
-  gap: 1em;
 }
 
 .nav-footer a {
